@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hola Fer, espero te guste</title>
+	<style>
+		body {
+			background-color: #faa6d4;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding-top: 50px;
+		}
+		h1 {
+			font-size: 3em;
+			margin-bottom: 30px;
+		}
+		button {
+			font-size: 1.5em;
+			padding: 20px;
+			margin: 20px;
+			border: none;
+			border-radius: 20px;
+			box-shadow: 0px 4px 4px rgb(237, 233, 233);
+			cursor: pointer;
+			position: absolute;
+		}
+		#si {
+			background-color: #ee4e9e;
+			left: 35%;
+			top: 40%;
+		}
+		#no {
+			background-color: #fc61a9ea;
+			left: 55%;
+			top: 50%;
+			animation: move-no 2s ease-in-out infinite;
+		}
+		#no:hover {
+			box-shadow: 0px 4px 4px rgba(246, 243, 243, 0.997);
+			animation: none;
+		}
+		@keyframes move-no {
+			0% {
+				transform: translate(0, 0);
+			}
+			25% {
+				transform: translate(20px, -20px);
+			}
+			50% {
+				transform: translate(0, -40px);
+			}
+			75% {
+				transform: translate(-20px, -20px);
+			}
+			100% {
+				transform: translate(0, 0);
+			}
+		}
+		#poem {
+			display: none;
+			margin: 50px;
+			padding: 30px;
+			background-color: #f8f0f0;
+			box-shadow: 0px 4px 4px rgb(246, 245, 245);
+			text-align: center;
+		}
+	</style>
+	<script>
+		function moveNoButton() {
+			const noButton = document.getElementById("no");
+			noButton.style.animation = "none";
+			noButton.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+			noButton.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+			setTimeout(function() {
+				noButton.style.animation = "move-no 2s ease-in-out infinite";
+			}, 10);
+		}
+
+		function openPoem() {
+			const poem = document.getElementById("poem");
+			poem.style.display = "block";
+			const buttons = document.getElementsByTagName("button");
+			for (let i = 0; i < buttons.length; i++) {
+				buttons[i].style.display = "none";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>¿Quieres leer un poema?</h1>
+	<button id="si" onclick="openPoem()">No</button>
+	<button id="no" onclick="moveNoButton()">Si</button>
+
+	<div id="poem">
+        Deseo desnudarte poco a poco, dejar que la pasión nos envuelva, y que mi boca descubra tus secretos, mientras mi cuerpo a tu lado se entrega. <br> <br>
+     
+        Quiero sentir la suavidad de tu piel, y descubrir cada uno de tus rincones, en un juego de placer sin fin.<br> <br>
+       
+        Mis labios se perderán en tu cuerpo, como barcos que navegan sin rumbo fijo, descubriendo cada parte de tu cuerpo, y elevándonos a un éxtasis vivo.<br> <br>
+       
+        Así, juntos disfrutaremos del placer, mientras nuestros cuerpos se funden en uno, y dejaremos que el tiempo se detenga.<br> <br>
+       
+        Quiero dsnudarte con pasión desbordante, mientras el ritmo de la música se desvanece.<br> <br>
+       
+        Hacerte mía de todas las formas posibles. Sentir tus latidos acelerados, tu respiración agitada en mi oído. Disfrutando juntos del éxtasis, que nuestros cuerpos nos regalan sin ruido.</p>
+		
+		</body>
+		</html>
